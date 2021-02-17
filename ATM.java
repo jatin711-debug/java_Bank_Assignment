@@ -81,14 +81,12 @@ public class ATM {
         
         switch(keyvalue){
             case 1:{
-                System.out.println(savingIndex);
                 System.out.println("#_SPECIFY FOLLOW DETAILS_#");
                 createAccount(savingIndex);
                 savingIndex++;
                 break;
             }
             case 2:{
-                System.out.println(savingIndex);
                 System.out.println("Customer : "+ account[savingIndex-1].getCustomerName());
                 System.out.println("Account Balance : "+ account[savingIndex-1].getCustomerBalance());
                 System.out.println("Monthly Interest earned: "+ DecimalFormat.getInstance().format(account[savingIndex-1].monthlyInterest()));
