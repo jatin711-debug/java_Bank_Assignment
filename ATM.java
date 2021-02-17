@@ -37,7 +37,13 @@ public class ATM {
         if(rate < 3) {
             System.out.println("Min of 3% is required for Saving Account\n"+"Please try again");
             this.menu();
-        }else{
+        }
+        else if(accountIdNumChecker(accId)){
+            System.out.println("Account Number You entered Is already registered, Please Try with New One");
+            this.menu();
+            return;
+        }
+        else{
             account[index] = new SavingsAccount(name,accId,rate,balance);
             System.out.println(account[index]);
         }
